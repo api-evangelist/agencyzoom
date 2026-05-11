@@ -1,0 +1,57 @@
+aid: agencyzoom
+name: AgencyZoom
+description: >-
+  AgencyZoom is a sales automation and customer retention platform built
+  specifically for property and casualty insurance agencies, combining lead
+  management, sales pipelines, automated onboarding, and producer performance
+  analytics in one workflow. The platform integrates with major agency
+  management systems and rating engines to consolidate prospect and policy
+  data. AgencyZoom exposes a REST API documented via OpenAPI for accessing
+  contacts, policies, pipeline, and activity data.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Insurance
+  - InsurTech
+  - CRM
+  - Sales Automation
+  - Agency Management
+  - Customer Retention
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/agencyzoom/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: agencyzoom:api
+    name: AgencyZoom API
+    description: >-
+      REST API for managing insurance agency contacts, policies, pipelines,
+      and producer activity inside AgencyZoom. API documentation is published
+      as an OpenAPI specification on the AgencyZoom application portal.
+    humanURL: https://app.agencyzoom.com/openapi/
+    baseURL: https://api.agencyzoom.com
+    tags:
+      - Insurance
+      - CRM
+      - Policies
+      - Pipeline
+      - Activity
+    properties:
+      - type: Documentation
+        url: https://app.agencyzoom.com/openapi/
+      - type: OpenAPI
+        url: https://app.agencyzoom.com/openapi/agencyzoom.yaml
+
+common:
+  - type: Website
+    url: https://agencyzoom.com
+  - type: Documentation
+    url: https://app.agencyzoom.com/openapi/
+  - type: Pricing
+    url: https://agencyzoom.com/pricing
+  - type: Sign Up
+    url: https://app.agencyzoom.com/signup
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
