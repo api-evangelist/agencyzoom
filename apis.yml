@@ -50,7 +50,7 @@ common:
     url: https://app.agencyzoom.com/openapi/
   - type: Pricing
     url: https://agencyzoom.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://app.agencyzoom.com/signup
 maintainers:
   - FN: Kin Lane
