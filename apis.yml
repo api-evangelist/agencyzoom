@@ -44,6 +44,8 @@ apis:
         url: https://app.agencyzoom.com/openapi/agencyzoom.yaml
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/agencyzoom
   - type: Website
     url: https://agencyzoom.com
   - type: Documentation
