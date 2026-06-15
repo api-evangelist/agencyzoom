@@ -1,0 +1,595 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AgencyZoom API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Standard login",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/auth/login"
+          },
+          "docs": "Standard login"
+        },
+        {
+          "info": {
+            "name": "SSO login",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/auth/ssologin"
+          },
+          "docs": "SSO login"
+        },
+        {
+          "info": {
+            "name": "User logout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/auth/logout"
+          },
+          "docs": "User logout"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Leads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search leads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/list"
+          },
+          "docs": "Search leads"
+        },
+        {
+          "info": {
+            "name": "Create personal lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/create"
+          },
+          "docs": "Create personal lead"
+        },
+        {
+          "info": {
+            "name": "Create commercial lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/create-biz-lead"
+          },
+          "docs": "Create commercial lead"
+        },
+        {
+          "info": {
+            "name": "Get lead details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get lead details"
+        },
+        {
+          "info": {
+            "name": "Update lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update lead"
+        },
+        {
+          "info": {
+            "name": "Mark lead as sold",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/sold",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark lead as sold"
+        },
+        {
+          "info": {
+            "name": "Retrieve opportunities for a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/opportunities",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve opportunities for a lead"
+        },
+        {
+          "info": {
+            "name": "Retrieve quotes for a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/quotes",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve quotes for a lead"
+        },
+        {
+          "info": {
+            "name": "Retrieve notes for a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/notes",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve notes for a lead"
+        },
+        {
+          "info": {
+            "name": "Add note to a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/notes",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add note to a lead"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search customers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/customers"
+          },
+          "docs": "Search customers"
+        },
+        {
+          "info": {
+            "name": "Get customer details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/customers/:customerId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get customer details"
+        },
+        {
+          "info": {
+            "name": "Update customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.agencyzoom.com/v1/api/customers/:customerId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update customer"
+        },
+        {
+          "info": {
+            "name": "Delete customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.agencyzoom.com/v1/api/customers/:customerId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete customer"
+        },
+        {
+          "info": {
+            "name": "Get customer policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/customers/:customerId/policies",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get customer policies"
+        },
+        {
+          "info": {
+            "name": "Get AMS policies for customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/customers/:customerId/ams-policies",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get AMS policies for customer"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/policies/create"
+          },
+          "docs": "Create policy"
+        },
+        {
+          "info": {
+            "name": "Update policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.agencyzoom.com/v1/api/policies/:policyId",
+            "params": [
+              {
+                "name": "policyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update policy"
+        },
+        {
+          "info": {
+            "name": "Tag policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/policies/update-tags"
+          },
+          "docs": "Tag policies"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Opportunities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities"
+          },
+          "docs": "Create opportunity"
+        },
+        {
+          "info": {
+            "name": "Get opportunity details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get opportunity details"
+        },
+        {
+          "info": {
+            "name": "Update opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update opportunity"
+        },
+        {
+          "info": {
+            "name": "Add driver to opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId/driver",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add driver to opportunity"
+        },
+        {
+          "info": {
+            "name": "Add vehicle to opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId/vehicle",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add vehicle to opportunity"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Configuration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List policy categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/product-categories"
+          },
+          "docs": "List policy categories"
+        },
+        {
+          "info": {
+            "name": "List policy types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/product-lines"
+          },
+          "docs": "List policy types"
+        },
+        {
+          "info": {
+            "name": "List employees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/employees"
+          },
+          "docs": "List employees"
+        },
+        {
+          "info": {
+            "name": "List carriers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/carriers"
+          },
+          "docs": "List carriers"
+        },
+        {
+          "info": {
+            "name": "List custom field definitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/custom-fields"
+          },
+          "docs": "List custom field definitions"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Email",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search email threads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/email-thread/list"
+          },
+          "docs": "Search email threads"
+        },
+        {
+          "info": {
+            "name": "Get email thread details",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/email-thread/email-thread-detail"
+          },
+          "docs": "Get email thread details"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Pipelines",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get pipelines by type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/pipelines"
+          },
+          "docs": "Get pipelines by type"
+        },
+        {
+          "info": {
+            "name": "Get pipelines with stages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/pipelines-and-stages"
+          },
+          "docs": "Get pipelines with stages"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
