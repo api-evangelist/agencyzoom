@@ -9,7 +9,7 @@ description: >-
   data. AgencyZoom exposes a REST API documented via OpenAPI for accessing
   contacts, policies, pipeline, and activity data.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Insurance
   - InsurTech
