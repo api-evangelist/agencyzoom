@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/agencyzoom-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send
+    as Authorization Bearer.
+  sources:
+  - openapi/agencyzoom-openapi.yml
