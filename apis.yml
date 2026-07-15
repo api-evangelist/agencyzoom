@@ -44,6 +44,8 @@ apis:
         url: https://app.agencyzoom.com/openapi/agencyzoom.yaml
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/agencyzoom-agentic-access.yml
   - type: DomainSecurity
     url: security/agencyzoom-domain-security.yml
   - type: Authentication
