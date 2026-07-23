@@ -1,0 +1,39 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication Email API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Email
+paths:
+  /v1/api/email-thread/list:
+    post:
+      tags:
+      - Email
+      summary: Search email threads
+      responses:
+        '200':
+          description: Email threads
+  /v1/api/email-thread/email-thread-detail:
+    post:
+      tags:
+      - Email
+      summary: Get email thread details
+      responses:
+        '200':
+          description: Email thread details
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.

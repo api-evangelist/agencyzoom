@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication Configuration API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Configuration
+paths:
+  /v1/api/product-categories:
+    get:
+      tags:
+      - Configuration
+      summary: List policy categories
+      responses:
+        '200':
+          description: Product categories
+  /v1/api/product-lines:
+    get:
+      tags:
+      - Configuration
+      summary: List policy types
+      responses:
+        '200':
+          description: Product lines
+  /v1/api/employees:
+    get:
+      tags:
+      - Configuration
+      summary: List employees
+      responses:
+        '200':
+          description: Employee list
+  /v1/api/carriers:
+    get:
+      tags:
+      - Configuration
+      summary: List carriers
+      responses:
+        '200':
+          description: Carrier list
+  /v1/api/custom-fields:
+    get:
+      tags:
+      - Configuration
+      summary: List custom field definitions
+      responses:
+        '200':
+          description: Custom fields
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.

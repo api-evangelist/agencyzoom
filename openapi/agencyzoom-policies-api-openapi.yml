@@ -1,0 +1,53 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication Policies API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Policies
+paths:
+  /v1/api/policies/create:
+    post:
+      tags:
+      - Policies
+      summary: Create policy
+      responses:
+        '201':
+          description: Policy created
+  /v1/api/policies/{policyId}:
+    put:
+      tags:
+      - Policies
+      summary: Update policy
+      parameters:
+      - name: policyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Policy updated
+  /v1/api/policies/update-tags:
+    post:
+      tags:
+      - Policies
+      summary: Tag policies
+      responses:
+        '200':
+          description: Tags updated
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.

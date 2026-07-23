@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication Customers API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Customers
+paths:
+  /v1/api/customers:
+    post:
+      tags:
+      - Customers
+      summary: Search customers
+      responses:
+        '200':
+          description: Customer list
+  /v1/api/customers/{customerId}:
+    get:
+      tags:
+      - Customers
+      summary: Get customer details
+      parameters:
+      - $ref: '#/components/parameters/CustomerId'
+      responses:
+        '200':
+          description: Customer details
+    put:
+      tags:
+      - Customers
+      summary: Update customer
+      parameters:
+      - $ref: '#/components/parameters/CustomerId'
+      responses:
+        '200':
+          description: Customer updated
+    delete:
+      tags:
+      - Customers
+      summary: Delete customer
+      parameters:
+      - $ref: '#/components/parameters/CustomerId'
+      responses:
+        '204':
+          description: Customer deleted
+  /v1/api/customers/{customerId}/policies:
+    get:
+      tags:
+      - Customers
+      summary: Get customer policies
+      parameters:
+      - $ref: '#/components/parameters/CustomerId'
+      responses:
+        '200':
+          description: Customer policies
+  /v1/api/customers/{customerId}/ams-policies:
+    get:
+      tags:
+      - Customers
+      summary: Get AMS policies for customer
+      parameters:
+      - $ref: '#/components/parameters/CustomerId'
+      responses:
+        '200':
+          description: AMS policies
+components:
+  parameters:
+    CustomerId:
+      name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.

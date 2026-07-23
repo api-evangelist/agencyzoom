@@ -1,0 +1,47 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Authentication
+paths:
+  /v1/api/auth/login:
+    post:
+      tags:
+      - Authentication
+      summary: Standard login
+      responses:
+        '200':
+          description: Authenticated, returns JWT
+  /v1/api/auth/ssologin:
+    post:
+      tags:
+      - Authentication
+      summary: SSO login
+      responses:
+        '200':
+          description: Authenticated, returns JWT
+  /v1/api/auth/logout:
+    post:
+      tags:
+      - Authentication
+      summary: User logout
+      responses:
+        '204':
+          description: Logged out
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.

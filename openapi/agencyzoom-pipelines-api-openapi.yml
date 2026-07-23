@@ -1,0 +1,39 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication Pipelines API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Pipelines
+paths:
+  /v1/api/pipelines:
+    get:
+      tags:
+      - Pipelines
+      summary: Get pipelines by type
+      responses:
+        '200':
+          description: Pipelines
+  /v1/api/pipelines-and-stages:
+    get:
+      tags:
+      - Pipelines
+      summary: Get pipelines with stages
+      responses:
+        '200':
+          description: Pipelines and stages
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.

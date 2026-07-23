@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication Opportunities API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Opportunities
+paths:
+  /v1/api/opportunities:
+    post:
+      tags:
+      - Opportunities
+      summary: Create opportunity
+      responses:
+        '201':
+          description: Opportunity created
+  /v1/api/opportunities/{opportunityId}:
+    get:
+      tags:
+      - Opportunities
+      summary: Get opportunity details
+      parameters:
+      - $ref: '#/components/parameters/OpportunityId'
+      responses:
+        '200':
+          description: Opportunity details
+    put:
+      tags:
+      - Opportunities
+      summary: Update opportunity
+      parameters:
+      - $ref: '#/components/parameters/OpportunityId'
+      responses:
+        '200':
+          description: Opportunity updated
+  /v1/api/opportunities/{opportunityId}/driver:
+    post:
+      tags:
+      - Opportunities
+      summary: Add driver to opportunity
+      parameters:
+      - $ref: '#/components/parameters/OpportunityId'
+      responses:
+        '201':
+          description: Driver added
+  /v1/api/opportunities/{opportunityId}/vehicle:
+    post:
+      tags:
+      - Opportunities
+      summary: Add vehicle to opportunity
+      parameters:
+      - $ref: '#/components/parameters/OpportunityId'
+      responses:
+        '201':
+          description: Vehicle added
+components:
+  parameters:
+    OpportunityId:
+      name: opportunityId
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.

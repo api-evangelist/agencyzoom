@@ -1,0 +1,122 @@
+openapi: 3.1.0
+info:
+  title: AgencyZoom Authentication Leads API
+  version: 1.0.0
+  description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
+  contact:
+    name: AgencyZoom
+    url: https://agencyzoom.com
+servers:
+- url: https://api.agencyzoom.com
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Leads
+paths:
+  /v1/api/leads/list:
+    post:
+      tags:
+      - Leads
+      summary: Search leads
+      responses:
+        '200':
+          description: Lead list
+  /v1/api/leads/create:
+    post:
+      tags:
+      - Leads
+      summary: Create personal lead
+      responses:
+        '201':
+          description: Lead created
+  /v1/api/leads/create-biz-lead:
+    post:
+      tags:
+      - Leads
+      summary: Create commercial lead
+      responses:
+        '201':
+          description: Commercial lead created
+  /v1/api/leads/{leadId}:
+    get:
+      tags:
+      - Leads
+      summary: Get lead details
+      parameters:
+      - $ref: '#/components/parameters/LeadId'
+      responses:
+        '200':
+          description: Lead details
+    put:
+      tags:
+      - Leads
+      summary: Update lead
+      parameters:
+      - $ref: '#/components/parameters/LeadId'
+      responses:
+        '200':
+          description: Lead updated
+  /v1/api/leads/{leadId}/sold:
+    post:
+      tags:
+      - Leads
+      summary: Mark lead as sold
+      parameters:
+      - $ref: '#/components/parameters/LeadId'
+      responses:
+        '200':
+          description: Lead marked as sold
+  /v1/api/leads/{leadId}/opportunities:
+    get:
+      tags:
+      - Leads
+      summary: Retrieve opportunities for a lead
+      parameters:
+      - $ref: '#/components/parameters/LeadId'
+      responses:
+        '200':
+          description: Opportunities
+  /v1/api/leads/{leadId}/quotes:
+    get:
+      tags:
+      - Leads
+      summary: Retrieve quotes for a lead
+      parameters:
+      - $ref: '#/components/parameters/LeadId'
+      responses:
+        '200':
+          description: Quotes
+  /v1/api/leads/{leadId}/notes:
+    get:
+      tags:
+      - Leads
+      summary: Retrieve notes for a lead
+      parameters:
+      - $ref: '#/components/parameters/LeadId'
+      responses:
+        '200':
+          description: Notes
+    post:
+      tags:
+      - Leads
+      summary: Add note to a lead
+      parameters:
+      - $ref: '#/components/parameters/LeadId'
+      responses:
+        '201':
+          description: Note added
+components:
+  parameters:
+    LeadId:
+      name: leadId
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Login via /v1/api/auth/login or /v1/api/auth/ssologin to obtain a JWT, then send as Authorization Bearer.
