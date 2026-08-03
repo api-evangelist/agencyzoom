@@ -1,0 +1,28 @@
+{
+  "provider": "agencyzoom",
+  "sources": [
+    "agencyzoom-authentication-api-openapi.yml",
+    "agencyzoom-configuration-api-openapi.yml",
+    "agencyzoom-customers-api-openapi.yml",
+    "agencyzoom-email-api-openapi.yml",
+    "agencyzoom-leads-api-openapi.yml",
+    "agencyzoom-opportunities-api-openapi.yml",
+    "agencyzoom-pipelines-api-openapi.yml",
+    "agencyzoom-policies-api-openapi.yml"
+  ],
+  "outputs": [
+    "agencyzoom-authentication-api-openapi.yml",
+    "agencyzoom-configuration-api-openapi.yml",
+    "agencyzoom-customers-api-openapi.yml",
+    "agencyzoom-email-api-openapi.yml",
+    "agencyzoom-leads-api-openapi.yml",
+    "agencyzoom-opportunities-api-openapi.yml",
+    "agencyzoom-pipelines-api-openapi.yml",
+    "agencyzoom-policies-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
