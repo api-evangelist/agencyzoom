@@ -1,0 +1,183 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AgencyZoom Authentication Leads API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search leads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/list"
+          },
+          "docs": "Search leads"
+        },
+        {
+          "info": {
+            "name": "Create personal lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/create"
+          },
+          "docs": "Create personal lead"
+        },
+        {
+          "info": {
+            "name": "Create commercial lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/create-biz-lead"
+          },
+          "docs": "Create commercial lead"
+        },
+        {
+          "info": {
+            "name": "Get lead details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get lead details"
+        },
+        {
+          "info": {
+            "name": "Update lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update lead"
+        },
+        {
+          "info": {
+            "name": "Mark lead as sold",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/sold",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark lead as sold"
+        },
+        {
+          "info": {
+            "name": "Retrieve opportunities for a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/opportunities",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve opportunities for a lead"
+        },
+        {
+          "info": {
+            "name": "Retrieve quotes for a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/quotes",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve quotes for a lead"
+        },
+        {
+          "info": {
+            "name": "Retrieve notes for a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/notes",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve notes for a lead"
+        },
+        {
+          "info": {
+            "name": "Add note to a lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/leads/:leadId/notes",
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add note to a lead"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

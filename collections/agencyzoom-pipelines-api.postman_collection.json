@@ -1,0 +1,179 @@
+{
+  "item": [
+    {
+      "id": "dbe0d617-708a-4696-8e08-b2406f5243dd",
+      "name": "Pipelines",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ede4c884-f716-43ac-9889-1dddb47669de",
+          "name": "Get pipelines by type",
+          "request": {
+            "name": "Get pipelines by type",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "api",
+                "pipelines"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d3bd2551-037c-4c8e-b646-2372cb581324",
+              "name": "Pipelines",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "api",
+                    "pipelines"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fe2a2a70-194e-4e78-bdf3-c5815b7853be",
+          "name": "Get pipelines with stages",
+          "request": {
+            "name": "Get pipelines with stages",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "api",
+                "pipelines-and-stages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ee3555fa-37df-4490-81ad-5ea5c79239e1",
+              "name": "Pipelines and stages",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "api",
+                    "pipelines-and-stages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.agencyzoom.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a6425472-7c5e-4ea2-a21d-9ace36fb597b",
+    "name": "AgencyZoom Authentication Pipelines API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.\n\nContact Support:\n Name: AgencyZoom",
+      "type": "text/plain"
+    }
+  }
+}

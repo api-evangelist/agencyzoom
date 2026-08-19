@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AgencyZoom Authentication Configuration API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Configuration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List policy categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/product-categories"
+          },
+          "docs": "List policy categories"
+        },
+        {
+          "info": {
+            "name": "List policy types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/product-lines"
+          },
+          "docs": "List policy types"
+        },
+        {
+          "info": {
+            "name": "List employees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/employees"
+          },
+          "docs": "List employees"
+        },
+        {
+          "info": {
+            "name": "List carriers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/carriers"
+          },
+          "docs": "List carriers"
+        },
+        {
+          "info": {
+            "name": "List custom field definitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/custom-fields"
+          },
+          "docs": "List custom field definitions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

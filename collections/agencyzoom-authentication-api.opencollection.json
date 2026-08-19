@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AgencyZoom Authentication API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Standard login",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/auth/login"
+          },
+          "docs": "Standard login"
+        },
+        {
+          "info": {
+            "name": "SSO login",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/auth/ssologin"
+          },
+          "docs": "SSO login"
+        },
+        {
+          "info": {
+            "name": "User logout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/auth/logout"
+          },
+          "docs": "User logout"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

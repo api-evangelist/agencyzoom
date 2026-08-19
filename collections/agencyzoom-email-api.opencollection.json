@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AgencyZoom Authentication Email API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Email",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search email threads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/email-thread/list"
+          },
+          "docs": "Search email threads"
+        },
+        {
+          "info": {
+            "name": "Get email thread details",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/email-thread/email-thread-detail"
+          },
+          "docs": "Get email thread details"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

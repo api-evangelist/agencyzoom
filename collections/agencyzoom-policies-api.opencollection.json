@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AgencyZoom Authentication Policies API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/policies/create"
+          },
+          "docs": "Create policy"
+        },
+        {
+          "info": {
+            "name": "Update policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.agencyzoom.com/v1/api/policies/:policyId",
+            "params": [
+              {
+                "name": "policyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update policy"
+        },
+        {
+          "info": {
+            "name": "Tag policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/policies/update-tags"
+          },
+          "docs": "Tag policies"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

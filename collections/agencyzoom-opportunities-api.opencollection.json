@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AgencyZoom Authentication Opportunities API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Opportunities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities"
+          },
+          "docs": "Create opportunity"
+        },
+        {
+          "info": {
+            "name": "Get opportunity details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get opportunity details"
+        },
+        {
+          "info": {
+            "name": "Update opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update opportunity"
+        },
+        {
+          "info": {
+            "name": "Add driver to opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId/driver",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add driver to opportunity"
+        },
+        {
+          "info": {
+            "name": "Add vehicle to opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.agencyzoom.com/v1/api/opportunities/:opportunityId/vehicle",
+            "params": [
+              {
+                "name": "opportunityId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add vehicle to opportunity"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
