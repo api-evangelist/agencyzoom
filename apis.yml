@@ -151,6 +151,9 @@ apis:
   - type: Documentation
     url: https://app.agencyzoom.com/openapi/
 common:
+  - type: CapabilityMap
+    url: capabilities/agencyzoom-capability-edges.yml
+    name: AgencyZoom Business Capability Map
   - type: AgenticAccess
     url: agentic-access/agencyzoom-agentic-access.yml
   - type: DomainSecurity
