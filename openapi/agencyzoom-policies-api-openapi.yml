@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: AgencyZoom Authentication Policies API
+  title: AgencyZoom Policies API
   version: 1.0.0
   description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
   contact:
@@ -22,6 +22,8 @@ paths:
       responses:
         '201':
           description: Policy created
+      operationId: postV1ApiPoliciesCreate
+      x-operation-id-source: derived
   /v1/api/policies/{policyId}:
     put:
       tags:
@@ -36,6 +38,8 @@ paths:
       responses:
         '200':
           description: Policy updated
+      operationId: putV1ApiPoliciesByPolicyId
+      x-operation-id-source: derived
   /v1/api/policies/update-tags:
     post:
       tags:
@@ -44,6 +48,8 @@ paths:
       responses:
         '200':
           description: Tags updated
+      operationId: postV1ApiPoliciesUpdateTags
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BearerAuth:

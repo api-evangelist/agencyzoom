@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: AgencyZoom Authentication Customers API
+  title: AgencyZoom Customers API
   version: 1.0.0
   description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
   contact:
@@ -22,6 +22,8 @@ paths:
       responses:
         '200':
           description: Customer list
+      operationId: postV1ApiCustomers
+      x-operation-id-source: derived
   /v1/api/customers/{customerId}:
     get:
       tags:
@@ -32,6 +34,8 @@ paths:
       responses:
         '200':
           description: Customer details
+      operationId: getV1ApiCustomersByCustomerId
+      x-operation-id-source: derived
     put:
       tags:
       - Customers
@@ -41,6 +45,8 @@ paths:
       responses:
         '200':
           description: Customer updated
+      operationId: putV1ApiCustomersByCustomerId
+      x-operation-id-source: derived
     delete:
       tags:
       - Customers
@@ -50,6 +56,8 @@ paths:
       responses:
         '204':
           description: Customer deleted
+      operationId: deleteV1ApiCustomersByCustomerId
+      x-operation-id-source: derived
   /v1/api/customers/{customerId}/policies:
     get:
       tags:
@@ -60,6 +68,8 @@ paths:
       responses:
         '200':
           description: Customer policies
+      operationId: getV1ApiCustomersByCustomerIdPolicies
+      x-operation-id-source: derived
   /v1/api/customers/{customerId}/ams-policies:
     get:
       tags:
@@ -70,6 +80,8 @@ paths:
       responses:
         '200':
           description: AMS policies
+      operationId: getV1ApiCustomersByCustomerIdAmsPolicies
+      x-operation-id-source: derived
 components:
   parameters:
     CustomerId:

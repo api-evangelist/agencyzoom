@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: AgencyZoom Authentication Opportunities API
+  title: AgencyZoom Opportunities API
   version: 1.0.0
   description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
   contact:
@@ -22,6 +22,8 @@ paths:
       responses:
         '201':
           description: Opportunity created
+      operationId: postV1ApiOpportunities
+      x-operation-id-source: derived
   /v1/api/opportunities/{opportunityId}:
     get:
       tags:
@@ -32,6 +34,8 @@ paths:
       responses:
         '200':
           description: Opportunity details
+      operationId: getV1ApiOpportunitiesByOpportunityId
+      x-operation-id-source: derived
     put:
       tags:
       - Opportunities
@@ -41,6 +45,8 @@ paths:
       responses:
         '200':
           description: Opportunity updated
+      operationId: putV1ApiOpportunitiesByOpportunityId
+      x-operation-id-source: derived
   /v1/api/opportunities/{opportunityId}/driver:
     post:
       tags:
@@ -51,6 +57,8 @@ paths:
       responses:
         '201':
           description: Driver added
+      operationId: postV1ApiOpportunitiesByOpportunityIdDriver
+      x-operation-id-source: derived
   /v1/api/opportunities/{opportunityId}/vehicle:
     post:
       tags:
@@ -61,6 +69,8 @@ paths:
       responses:
         '201':
           description: Vehicle added
+      operationId: postV1ApiOpportunitiesByOpportunityIdVehicle
+      x-operation-id-source: derived
 components:
   parameters:
     OpportunityId:

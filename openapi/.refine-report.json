@@ -1,14 +1,7 @@
 {
   "provider": "agencyzoom",
   "sources": [
-    "agencyzoom-authentication-api-openapi.yml",
-    "agencyzoom-configuration-api-openapi.yml",
-    "agencyzoom-customers-api-openapi.yml",
-    "agencyzoom-email-api-openapi.yml",
-    "agencyzoom-leads-api-openapi.yml",
-    "agencyzoom-opportunities-api-openapi.yml",
-    "agencyzoom-pipelines-api-openapi.yml",
-    "agencyzoom-policies-api-openapi.yml"
+    "_original/agencyzoom-openapi.yml"
   ],
   "outputs": [
     "agencyzoom-authentication-api-openapi.yml",
@@ -23,6 +16,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "agencyzoom-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "agencyzoom-authentication-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "agencyzoom-configuration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "agencyzoom-customers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "agencyzoom-email-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "agencyzoom-leads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "agencyzoom-opportunities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "agencyzoom-pipelines-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "agencyzoom-policies-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

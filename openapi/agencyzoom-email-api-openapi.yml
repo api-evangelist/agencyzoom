@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: AgencyZoom Authentication Email API
+  title: AgencyZoom Email API
   version: 1.0.0
   description: REST API for managing insurance agency contacts, leads, customers, opportunities, policies, pipelines, and producer activity inside AgencyZoom. Derived from the OpenAPI specification published on the AgencyZoom application portal.
   contact:
@@ -22,6 +22,8 @@ paths:
       responses:
         '200':
           description: Email threads
+      operationId: postV1ApiEmailThreadList
+      x-operation-id-source: derived
   /v1/api/email-thread/email-thread-detail:
     post:
       tags:
@@ -30,6 +32,8 @@ paths:
       responses:
         '200':
           description: Email thread details
+      operationId: postV1ApiEmailThreadEmailThreadDetail
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BearerAuth:
