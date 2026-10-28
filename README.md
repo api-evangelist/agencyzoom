@@ -1,4 +1,4 @@
-# AgencyZoom (agencyzoom)
+# AgencyZoom
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,59 +66,111 @@
 
 AgencyZoom is a sales automation and customer retention platform built specifically for property and casualty insurance agencies, combining lead management, sales pipelines, automated onboarding, and producer performance analytics in one workflow. The platform integrates with major agency management systems and rating engines to consolidate prospect and policy data. AgencyZoom exposes a REST API documented via OpenAPI for accessing contacts, policies, pipeline, and activity data.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/agencyzoom/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/agencyzoom/refs/heads/main/apis.yml)
+**Areas:** Insurance · Insurtech · CRM · Sales Automation · Agency Management · Customer Retention
 
-## Scope
+## AgencyZoom on APIs.io
 
-- **Type:** Index
+Everything profiled for AgencyZoom is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agencyzoom/](https://apis.io/providers/agencyzoom/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Insurance
-- InsurTech
-- CRM
-- Sales Automation
-- Agency Management
-- Customer Retention
+- [AgencyZoom Authentication API](https://apis.io/apis/agencyzoom/agencyzoom-authentication-api/) — The Authentication API from AgencyZoom — 3 operation(s) for authentication.
+- [AgencyZoom Configuration API](https://apis.io/apis/agencyzoom/agencyzoom-configuration-api/) — The Configuration API from AgencyZoom — 5 operation(s) for configuration.
+- [AgencyZoom Customers API](https://apis.io/apis/agencyzoom/agencyzoom-customers-api/) — The Customers API from AgencyZoom — 4 operation(s) for customers.
+- [AgencyZoom Email API](https://apis.io/apis/agencyzoom/agencyzoom-email-api/) — The Email API from AgencyZoom — 2 operation(s) for email.
+- [AgencyZoom Leads API](https://apis.io/apis/agencyzoom/agencyzoom-leads-api/) — The Leads API from AgencyZoom — 8 operation(s) for leads.
+- [AgencyZoom Opportunities API](https://apis.io/apis/agencyzoom/agencyzoom-opportunities-api/) — The Opportunities API from AgencyZoom — 4 operation(s) for opportunities.
+- [AgencyZoom Pipelines API](https://apis.io/apis/agencyzoom/agencyzoom-pipelines-api/) — The Pipelines API from AgencyZoom — 2 operation(s) for pipelines.
+- [AgencyZoom Policies API](https://apis.io/apis/agencyzoom/agencyzoom-policies-api/) — The Policies API from AgencyZoom — 3 operation(s) for policies.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### AgencyZoom API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for managing insurance agency contacts, policies, pipelines, and producer activity inside AgencyZoom. API documentation is published as an OpenAPI specification on the AgencyZoom application portal.
+- [Agencyzoom Agentic Access](https://apis.io/agentic-access/agencyzoom/agencyzoom-agentic-access/)
 
-- **Human URL:** [https://app.agencyzoom.com/openapi/](https://app.agencyzoom.com/openapi/)
-- **Base URL:** `https://api.agencyzoom.com`
+#### Collections (9)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Insurance
-- CRM
-- Policies
-- Pipeline
-- Activity
+- [AgencyZoom API](https://apis.io/collections/agencyzoom/open-agencyzoom/)
+- [AgencyZoom Authentication API](https://apis.io/collections/agencyzoom/open-agencyzoom-authentication-api/)
+- [AgencyZoom Authentication Configuration API](https://apis.io/collections/agencyzoom/open-agencyzoom-configuration-api/)
+- [AgencyZoom Authentication Customers API](https://apis.io/collections/agencyzoom/open-agencyzoom-customers-api/)
+- [AgencyZoom Authentication Email API](https://apis.io/collections/agencyzoom/open-agencyzoom-email-api/)
+- [AgencyZoom Authentication Leads API](https://apis.io/collections/agencyzoom/open-agencyzoom-leads-api/)
+- [AgencyZoom Authentication Opportunities API](https://apis.io/collections/agencyzoom/open-agencyzoom-opportunities-api/)
+- [AgencyZoom Authentication Pipelines API](https://apis.io/collections/agencyzoom/open-agencyzoom-pipelines-api/)
+- [AgencyZoom Authentication Policies API](https://apis.io/collections/agencyzoom/open-agencyzoom-policies-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://app.agencyzoom.com/openapi/)
-- [OpenAPI](https://app.agencyzoom.com/openapi/agencyzoom.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/agencyzoom.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/agencyzoom.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Agencyzoom Authentication](https://apis.io/security/agencyzoom/agencyzoom-authentication/)
+- [Agencyzoom Domain Security](https://apis.io/security/agencyzoom/agencyzoom-domain-security/)
 
-- [LinkedIn](https://www.linkedin.com/company/agencyzoom)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://agencyzoom.com)
 - [Documentation](https://app.agencyzoom.com/openapi/)
 - [Pricing](https://agencyzoom.com/pricing)
-- [Sign Up](https://app.agencyzoom.com/signup)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 25.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 46.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 23.7 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.5** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/agencyzoom/](https://apis.io/providers/agencyzoom/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AgencyZoom: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/agencyzoom/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
